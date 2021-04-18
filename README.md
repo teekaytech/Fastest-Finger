@@ -2,6 +2,8 @@
 
 > A preliminary app to understand Vue.JS lifecycle hooks and custom events.
 
+### [Demo Here](https://fastest-finger-vue.netlify.app/)
+
 ## Project setup
 
 ```
