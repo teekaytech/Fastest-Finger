@@ -1,8 +1,20 @@
 <template>
-  <h1>Reaction Timer</h1>
+  <h1>Fastest Finger</h1>
   <button @click="start" :disabled="isPlaying">Play</button>
   <Block v-if="isPlaying" :delay="delay" @end="endGame" />
   <Results v-if="showResults" :score="score" />
+  <div class="instruction" v-if="!isPlaying">
+    <h4>How to play</h4>
+    <ul>
+      <li>Click on the 'Play' button to start</li>
+      <li>Wait for the 'Click me' box to show</li>
+      <li>Click the box as fast as you can, immediately it appears</li>
+      <li>
+        There are 3 results: 'Fastest finger', 'Fast Reflex' and 'Snail pace'.
+        Get 'Fastest Finger' as result to win the game
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -62,5 +74,10 @@ button {
 button[disabled] {
   opacity: 0.2;
   cursor: not-allowed;
+}
+
+.instruction {
+  width: 500px;
+  text-align: left;
 }
 </style>
