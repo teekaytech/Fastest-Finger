@@ -15,14 +15,10 @@ export default {
     };
   },
   mounted() {
-    console.log("mounted!");
     setTimeout(() => {
       this.showBlock = true;
       this.startTimer();
     }, this.delay);
-  },
-  unmounted() {
-    console.log("Component unmounted!");
   },
   methods: {
     startTimer() {
